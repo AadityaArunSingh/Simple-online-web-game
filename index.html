@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinking Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="startScreen" class="container">
+        <h1>Drinking Game</h1>
+        <p>How many players are there?</p>
+        <input type="number" id="numPlayers" min="1" max="20" value="1">
+        <p>Select leaderboard score:</p>
+        <select id="maxPoints">
+            <option value="5">5 Points</option>
+            <option value="10">10 Points</option>
+        </select>
+        <button id="startGameBtn">Next</button>
+    </div>
+    
+    <div id="nameScreen" class="container hidden">
+        <h1>Enter Player Names</h1>
+        <form id="nameForm"></form>
+        <button id="submitNamesBtn">Start Game</button>
+    </div>
+    
+    <div id="gameScreen" class="container hidden">
+        <h1>Drinking Game</h1>
+        <p id="currentPlayer">Player's Turn</p>
+        <p id="challenge">Press the button to get a challenge!</p>
+        <button id="challengeBtn">Get Challenge</button>
+        <p id="score">Score: 0</p>
+        <button id="completedBtn"></button>
+        <button id="forfeitBtn"></button>
+        <button id="resetBtn" title="Reset">🔁</button>
+<button id="newGameBtn" title="New Game">🎮</button>
+    </div>
+
+    <div id="leaderboardScreen" class="container hidden">
+        <h1>Leaderboard</h1>
+        <div id="leaderboard"></div>
+        <button id="playAgainBtn">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

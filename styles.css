@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(45deg, #ff6b6b, #f8e71c, #50b5ff);
+    background-size: 600% 600%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background: linear-gradient(45deg, #ff6b6b, #f8e71c, #50b5ff);
+    background-size: 600% 600%;
+    animation: gradient 10s ease infinite;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin: 10px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* New styles for completed and forfeit buttons */
+#completedBtn::before {
+    content: "\2714"; /* Tick mark emoji */
+    margin-right: 5px;
+}
+
+#forfeitBtn::before {
+    content: "\2716"; /* Cross emoji */
+    margin-right: 5px;
+}
+
+/* Existing CSS */
+
+/* Positioning reset button to top right */
+#resetBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Positioning new game button to top left */
+#newGameBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
